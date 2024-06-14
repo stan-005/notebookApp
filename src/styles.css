@@ -1,1 +1,67 @@
-/* You can add global styles to this file, and also import other style files */
+/* Define global variables for consistent theming */
+:root {
+  --primary-color: #3f51b5; /* Blue */
+  --secondary-color: #607d8b; /* Grey */
+  --text-color: #333; /* Dark grey for text */
+}
+
+/* Apply variables to global styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0; /* Light grey background */
+  color: var(--text-color);
+}
+
+/* Default link styles */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: darken(var(--primary-color), 10%);
+}
+
+/* Buttons */
+button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: darken(var(--primary-color), 10%);
+}
+
+/* Form elements */
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+/* Cards */
+.card {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+/* Responsive utility */
+@media (max-width: 768px) {
+  /* Example of responsive adjustments */
+  .card {
+    padding: 15px;
+  }
+}

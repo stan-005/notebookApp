@@ -1,0 +1,29 @@
+/* Specific styles for the note list component */
+.notes-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.note-card {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  border-radius: 4px;
+  transition: transform 0.3s ease;
+}
+
+.note-card:hover {
+  transform: translateY(-5px);
+}
+
+.note-card h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.note-card p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666;
+}

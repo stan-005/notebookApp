@@ -1,0 +1,5 @@
+<div *ngIf="note">
+  <h2>{{ note.title }}</h2>
+  <p>{{ note.content }}</p>
+  <small>{{ note.createdAt.toISOString() }}</small>
+</div>

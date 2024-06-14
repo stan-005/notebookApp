@@ -1,0 +1,11 @@
+<form [formGroup]="noteForm" (ngSubmit)="onSubmit()" *ngIf="noteForm">
+  <label for="title">Title:</label>
+  <input id="title" formControlName="title" required>
+  <div *ngIf="noteForm.get('title')?.invalid && noteForm.get('title')?.touched">Title is required</div>
+
+  <label for="content">Content:</label>
+  <textarea id="content" formControlName="content" required></textarea>
+  <div *ngIf="noteForm.get('content')?.invalid && noteForm.get('content')?.touched">Content is required</div>
+
+  <button type="submit" [disabled]="noteForm.invalid">Add Note</button>
+</form>
