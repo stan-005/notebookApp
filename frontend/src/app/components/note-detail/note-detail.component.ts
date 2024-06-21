@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Note } from '../../models/note.model';
+import  Note  from '../../models/note.model';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';

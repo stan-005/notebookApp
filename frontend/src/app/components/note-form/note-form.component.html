@@ -7,5 +7,5 @@
   <textarea id="content" formControlName="content" required></textarea>
   <div *ngIf="noteForm.get('content')?.invalid && noteForm.get('content')?.touched">Content is required</div>
 
-  <button type="submit" [disabled]="noteForm.invalid">Add Note</button>
+  <button type="submit">Add Note</button>
 </form>
