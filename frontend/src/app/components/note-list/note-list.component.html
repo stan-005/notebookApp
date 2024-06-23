@@ -1,5 +1,10 @@
-<div *ngFor="let note of notes" >
-  <h2>{{ note.Title }}</h2>
-  <p>{{ note.Content }}</p>
-  <small>{{ note.CreatedAt }}</small>
+<div class="notes-container">
+  <h1 class="notes-title">MY NOTES</h1>
+  <div class="notes-list">
+    <div *ngFor="let note of notes" class="note-card">
+      <h2>{{ note.Title }}</h2>
+      <p>{{ note.Content }}</p>
+      <small>{{ note.CreatedAt }}</small>
+    </div>
+  </div>
 </div>
