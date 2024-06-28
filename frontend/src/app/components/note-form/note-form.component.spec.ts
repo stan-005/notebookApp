@@ -9,7 +9,7 @@ describe('NoteFormComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [NoteFormComponent]
-    })
+    })//
     .compileComponents();
 
     fixture = TestBed.createComponent(NoteFormComponent);

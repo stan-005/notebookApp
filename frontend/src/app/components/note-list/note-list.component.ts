@@ -5,8 +5,8 @@ import { DatePipe } from '@angular/common';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-import { RouterOutlet } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { RouterOutlet } from '@angular/router';
 
 
 @Component({

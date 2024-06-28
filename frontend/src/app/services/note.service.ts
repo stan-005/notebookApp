@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, catchError, tap } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import Note from '../models/note.model';
 
@@ -20,7 +20,15 @@ export class NoteService {
   }
 
   createNote(note: Note): Observable<Note> {
-    return this.http.post<Note>(this.apiUrl, note);
+    console.log("Creating note:", note);
+    return this.http.post<Note>(this.apiUrl, note)
+      .pipe(
+        tap((response: Note) => console.log("Note created:", response)),
+        catchError((error) => {
+          console.error("Error creating note:", error);
+          throw error;
+        })
+      );
   }
 
   updateNote(id: string, note: Note): Observable<Note> {
